@@ -1,3 +1,10 @@
+# Gamers
+## About
+This is a tiny React app I made to practice React basics. 
+
+It includes a form that allows the user to add a new Gamer with first name, last name, and unique username to a list of gamers. It displays the number of games the individual gamers have played.
+
+# For Developers
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
