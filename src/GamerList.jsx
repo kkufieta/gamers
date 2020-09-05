@@ -6,11 +6,18 @@ class GamerList extends React.Component {
             <div className="uk-container">
                 <h2 className="uk-margin-top">GamerList</h2>
                 <div className="uk-align-left">
-                    <p>Gamer 1 placeholder</p>
-                    <p>Gamer 2 placeholder</p>
-                    <p>Gamer 3 placeholder</p>
+                    <ul className="uk-list uk-list-divider">
+                        {this.props.gamers.map(gamer => (
+                            <li key={gamer.username}>
+                                <div>
+                                    <p>{gamer.firstName} {gamer.lastName}</p>
+                                    <p>Username: {gamer.username}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-            </div>
+            </div >
         )
     }
 }

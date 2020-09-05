@@ -25,10 +25,25 @@ class InputForm extends React.Component {
         })
     }
 
+    handleOnSubmit = (event) => {
+        event.preventDefault();
+        console.log(this.state);
+        this.props.addGamer({
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            username: this.state.username
+        })
+        this.setState({
+            firstName: '',
+            lastName: '',
+            username: ''
+        })
+    }
+
     render() {
         return (
             <div className="uk-container">
-                <form className="uk-margin-top">
+                <form className="uk-margin-top" onSubmit={this.handleOnSubmit}>
                     <fieldset className="uk-fieldset">
                         <legend className="uk-legend">Add a new Gamer</legend>
                         <div className="uk-margin">
@@ -59,10 +74,10 @@ class InputForm extends React.Component {
                             />
                         </div>
                     </fieldset>
+                    <button className="uk-align-center uk-button uk-button-default">
+                        Submit
+                    </button>
                 </form >
-                <button className="uk-align-center uk-button uk-button-default">
-                    Submit
-                </button>
             </div >
 
         )
